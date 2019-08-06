@@ -1,0 +1,29 @@
+export const GET_ERRORS = "GET_ERRORS";
+export const USER_LOADING = "USER_LOADING";
+export const SET_CURRENT_USER = "SET_CURRENT_USER"
+
+
+
+export const NEW_DESKTOP = "NEW_DESKTOP";
+export const NEW_LAPTOP = "NEW_LAPTOP";
+
+
+
+export const ALLDESKTOPS = "ALLDESKTOPS";
+export const ALLLAPTOPS = "ALLLAPTOPS";
+ 
+
+
+export const DELETE_LAPTOP = "DELETE_LAPTOP"
+export const DELETE_DESKTOP = "DELETE_DESKTOP"
+
+export const EDIT_DESKTOP = "EDIT_DESKTOP"
+export const EDIT_LAPTOP = "EDIT_LAPTOP"
+
+export const SEARCH_LAPTOP = "SEARCH_LAPTOP"
+
+export const TOTAL_DESKTOPS = "TOTAL_DESKTOPS"
+export const TOTAL_LAPTOPS = "TOTAL_LAPTOPS"
+
+export const DESKTOP_REGION = "DESKTOP_REGION"
+export const LAPTOP_REGION = "LAPTOP_REGION"
