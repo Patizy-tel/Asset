@@ -8,6 +8,8 @@ import NavDash from '../dashboard/NavDash'
 
 
 
+
+
 class AllDesktop extends Component {
   
   constructor(props) {
@@ -141,6 +143,14 @@ componentWillMount(){
       </h1>
       <Col sm={2}>
       <Input  type="text" value={this.state.search} onChange={this.updateSearch.bind(this)} placeholder="search By name" />
+      <Button color="success" onClick={()=>{
+        alert("this btn")
+      }}>
+      Download Excel
+      </Button>
+      
+      
+      
       </Col>
       
     <Table hover striped size="sm" responsive>
@@ -263,8 +273,8 @@ componentWillMount(){
                                                     
     </ModalBody>
     <ModalFooter>
-      <Button color="primary" onClick={this.SaveEdit}>Save</Button>{' '}
-      <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+      <Button color="success" onClick={this.SaveEdit}>Save</Button>{' '}
+      <Button color="danger" onClick={this.toggle}>Cancel</Button>
     </ModalFooter>
   </Modal>
 
@@ -275,8 +285,8 @@ componentWillMount(){
               ARE YOU SURE YOU WANT TO DELETE RECORD
   </ModalBody>
   <ModalFooter>
-    <Button color="primary" onClick={this.DeleteIT}>YES</Button>{' '}
-    <Button color="secondary" onClick={this.toggle2}>Cancel</Button>
+    <Button color="danger" onClick={this.DeleteIT}>YES</Button>{' '}
+    <Button color="success" onClick={this.toggle2}>Cancel</Button>
   </ModalFooter>
 </Modal>
 

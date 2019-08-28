@@ -228,7 +228,7 @@ value={this.state.deviceSerial} placeholder="Device Serial Number" />
 <Label for="printerName" sm={2}>PrinterName:</Label>
 <Col sm={10}>
 <Input type="text" name="printerName" id="printerName"   onChange={this.onChange}
-value={this.state.printerName} placeholder="Printer Name" />
+value={this.state.printerName} />
 </Col>
 </FormGroup> 
 
@@ -237,7 +237,7 @@ value={this.state.printerName} placeholder="Printer Name" />
 <Label for="printerSerialNumber" sm={2}>PrinterSerialNumber:</Label>
 <Col sm={10}>
 <Input type="text" name="printerSerialNumber" id="printerSerialNumber"   onChange={this.onChange}
-value={this.state.printerSerialNumber} placeholder="Printer Serial Number" />
+value={this.state.printerSerialNumber}/>
 </Col>
 </FormGroup> 
 
@@ -256,7 +256,7 @@ value={this.state.printerSerialNumber} placeholder="Printer Serial Number" />
   </ModalBody>
   <ModalFooter>
     <Button color="danger" onClick={this.DeleteIT}>YES</Button>{' '}
-    <Button color="secondary" onClick={this.toggle2}>Cancel</Button>
+    <Button color="primary" onClick={this.toggle2}>Cancel</Button>
   </ModalFooter>
 </Modal>
 

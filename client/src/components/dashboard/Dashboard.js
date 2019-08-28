@@ -33,9 +33,8 @@ componentWillMount(){
 }
   render() {
 
-    let {totalDesks}  = this.props.totaldesks
-    let {totalLaps} =  this.props.totallaptops
-  
+    let {totalDesks}  = this.props.totaldesks;
+    let {totalLaps} =  this.props.totallaptops;
     let laptopsbyRegion =  this.props.laptopregion.map((x , i)=>(
       <tr key={x._id}>
       <th>{i +1}</th>
@@ -55,9 +54,6 @@ componentWillMount(){
     </tr>
 
     ))
-
-
-    
     return (
       
       <div>
@@ -66,25 +62,25 @@ componentWillMount(){
       <Row style={{marginTop:"50px"}}>
 
       <Col> 
-      <div style={{height:"200px" ,borderRadius:'25%', borderStyle: "ridge",backgroundColor:"f1f1f1" ,textAlign:"center",fontSize:"20px",boxShadow: "10px 10px 5px green"}}>
+      <div style={Styles.divStyles}>
       <CardBody>
-        <CardTitle style={{textShadow: "2px 2px 5px #2b3"}}>TOTAL DESKTOPS</CardTitle>
-        <Button color="success" style={{width:"100px" ,height:"80px" ,fontSize:"25px",borderRadius:"25px"}}>{totalDesks}</Button>
+        <CardTitle style={Styles.headerStyles}>TOTAL DESKTOPS</CardTitle>
+        <Button color="success" style={Styles.ButtonStyles}>{totalDesks}</Button>
       </CardBody>
       </div>
       </Col>
 
       <Col>
-      <div  style={{height:"200px" ,borderRadius:'25%', borderStyle: "ridge",backgroundColor:"f1f1f1" ,textAlign:"center",fontSize:"20px",boxShadow: "10px 10px 5px green"}}>
+      <div  style={Styles.divStyles}>
       <CardBody>
-        <CardTitle style={{textShadow: "2px 2px 5px #2b3"}}>TOTAL LAPTOPS</CardTitle>
-        <Button color="success" style={{width:"100px" ,height:"80px" ,fontSize:"25px",borderRadius:"25px"}}>{totalLaps}</Button>
+        <CardTitle style={Styles.headerStyles}>TOTAL LAPTOPS</CardTitle>
+        <Button color="success" style={Styles.ButtonStyles}>{totalLaps}</Button>
       </CardBody>
       </div></Col>
     </Row>
     <div  style={{marginTop:"20px"}}>
 
-    <h1 style={{textAlign:"center" ,textShadow: "2px 2px 5px #2b3"}}>Laptops By Center</h1>
+    <h1 style={Styles.headerStyles}>Laptops By Center</h1>
    
     <Table hover striped size="sm" responsive>
     <thead>
@@ -99,9 +95,9 @@ componentWillMount(){
     </tbody>
   </Table>
   </div>
-  <div  style={{marginTop:"20px"}}>
+  <div tyle={{marginTop:"20px"}}>
 
-  <h1 style={{textAlign:"center",textShadow: "2px 2px 5px #2b3"}}>Desktops By Center</h1>
+  <h1 style={Styles.headerStyles}>Desktops By Center</h1>
   <Table hover striped size="sm" responsive>
   <thead>
     <tr>
@@ -126,6 +122,28 @@ componentWillMount(){
   }
 }
 
+
+const Styles = {
+  headerStyles:{
+    textAlign:"center",
+    textShadow: "2px 2px 5px #2b3"
+  } ,
+  divStyles:{
+     height:"200px" ,
+     borderRadius:'25%',
+     borderStyle: "ridge",
+     backgroundColor:"f1f1f1" ,
+     textAlign:"center",
+     fontSize:"20px",
+     boxShadow: "10px 10px 5px green"
+    } ,
+    ButtonStyles:{
+      width:"100px" ,
+      height:"80px" ,
+      fontSize:"25px",
+      borderRadius:"25px"}
+  
+}
 
 const mapStateToProps = state => ({
  

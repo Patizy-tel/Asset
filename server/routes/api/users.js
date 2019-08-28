@@ -26,10 +26,13 @@ var config = require('../../config/index');
 
                     // if user is found and password is valid
                 // create a token
-                var token = jwt.sign({ id: user._id ,role:user.role , username:user.username},  config.secret);
+                var token = jwt.sign({ id: user._id ,role:user.role , username:user.username},  config.secret ,{
+                    // expiresIn:5 // expires in 24 hours
+                      }); 
             
                 // return the information including token as JSON
-                res.status(200).send({ auth: true, token: token  });
+                res.status(200).send({ auth: true, token: token  });  
+                
                 
 
                  }

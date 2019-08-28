@@ -60,9 +60,9 @@ class NavDash extends React.Component {
       <div>
         <Navbar color="success" light fixed="top" expand="md" style={{ boxShadow: "0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}>
 
-       
-          <NavbarBrand href="/dashboard" style={{color:"white"}}>Asset-Management System</NavbarBrand>
-         
+          <Link to="/dashboard" >
+          <NavbarBrand style={{color:"white"}}>Asset-Management System</NavbarBrand>
+          </Link>
          
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
